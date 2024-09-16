@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class ButtonPrimary extends StatelessWidget {
-  const ButtonPrimary({super.key, required this.text, required this.onTap});
+  const ButtonPrimary({
+    super.key,
+    required this.text,
+    required this.onTap,
+  });
   final String text;
   final VoidCallback onTap;
 
@@ -9,7 +13,7 @@ class ButtonPrimary extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       borderRadius: BorderRadius.circular(50),
-      color: const Color(0xffFFBC1C),
+      color: const Color(0xff50C2C9),
       child: InkWell(
         borderRadius: BorderRadius.circular(50),
         onTap: onTap,
@@ -22,7 +26,7 @@ class ButtonPrimary extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
-                color: Color(0xff070623),
+                color: Colors.white,
               ),
             ),
           ),

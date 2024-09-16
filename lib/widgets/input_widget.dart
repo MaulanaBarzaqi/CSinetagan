@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Input extends StatelessWidget {
-  const Input({
+class InputWidget extends StatelessWidget {
+  const InputWidget({
     super.key,
     required this.icon,
     required this.hint,
