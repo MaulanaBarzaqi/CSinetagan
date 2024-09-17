@@ -27,7 +27,6 @@ class ChatSource {
       'message': chat.message,
       'receiverId': chat.receiverId,
       'senderId': chat.senderId,
-      'bikeDetail': chat.bikeDetail,
       'timestamp': FieldValue.serverTimestamp(),
     });
   }

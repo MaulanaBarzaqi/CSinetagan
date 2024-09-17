@@ -41,25 +41,33 @@ class _SignInPageState extends State<SignInPage> {
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 0),
         children: [
-          const Gap(60),
+          const Gap(200),
           Image.asset(
             'assets/logo_inetagan.png',
-            height: 80,
+            height: 71,
+            width: 171,
           ),
-          const Gap(70),
-          buildHeader(),
-          const Gap(23),
+          const Gap(30),
+          const Text(
+            "Masuk akun",
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.w700,
+              color: Color(0xff50C2C9),
+            ),
+          ),
+          const Gap(30),
           const Text(
             'Email',
             style: TextStyle(
-              fontSize: 14,
+              fontSize: 16,
               fontWeight: FontWeight.w600,
               color: Color(0xff50C2C9),
             ),
           ),
           const Gap(12),
           InputWidget(
-            icon: 'assets/ic_service_on.png',
+            icon: 'assets/ic_message.png',
             hint: 'tulis email anda',
             editingController: edtEmail,
           ),
@@ -67,19 +75,19 @@ class _SignInPageState extends State<SignInPage> {
           const Text(
             'Password',
             style: TextStyle(
-              fontSize: 14,
+              fontSize: 16,
               fontWeight: FontWeight.w600,
               color: Color(0xff50C2C9),
             ),
           ),
           const Gap(12),
           InputWidget(
-            icon: 'assets/ic_password.png',
+            icon: 'assets/ic_key.png',
             hint: 'tulis password anda',
             editingController: edtPassword,
+            obsecure: true,
           ),
-          const Gap(12),
-          const Gap(40),
+          const Gap(30),
           ButtonPrimary(
             text: 'Login',
             onTap: masukAkun,
@@ -89,28 +97,4 @@ class _SignInPageState extends State<SignInPage> {
       ),
     );
   }
-}
-
-Widget buildHeader() {
-  return const Column(
-    children: [
-      Text(
-        'Masuk Akun',
-        style: TextStyle(
-          fontSize: 24,
-          fontWeight: FontWeight.w700,
-          color: Color(0xff50C2C9),
-        ),
-      ),
-      Gap(6),
-      Text(
-        'Tambahkan Detail Anda untuk Login',
-        style: TextStyle(
-          fontSize: 13,
-          fontWeight: FontWeight.w400,
-          color: Color(0xff6D6C6C),
-        ),
-      ),
-    ],
-  );
 }

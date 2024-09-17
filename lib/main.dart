@@ -1,5 +1,5 @@
 import 'package:csinetagan/firebase_options.dart';
-import 'package:csinetagan/pages/chatting_page.dart';
+import 'package:csinetagan/pages/bantuan_page.dart';
 import 'package:csinetagan/pages/list_chatting_page.dart';
 import 'package:csinetagan/pages/sign_in_page.dart';
 import 'package:csinetagan/pages/splash_screen.dart';
@@ -40,11 +40,11 @@ class MyApp extends StatelessWidget {
       routes: {
         '/signin': (context) => const SignInPage(),
         '/list-chatting-page': (context) => const ListChattingPage(),
-        '/chatting': (context) {
+        '/bantuan': (context) {
           Map data = ModalRoute.of(context)!.settings.arguments as Map;
           String uid = data['uid'];
           String userName = data['userName'];
-          return ChattingPage(
+          return BantuanPage(
             uid: uid,
             userName: userName,
           );
